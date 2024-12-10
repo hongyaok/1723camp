@@ -34,7 +34,7 @@ def creators_gallery():
         }
         for img in image_files
     ]
-    print(images)
+    random.shuffle(images)
     return render_template('creators_gallery.html', images=images)
 
 @app.route('/creatorgallery/<filename>')
