@@ -18,12 +18,17 @@ def allowed_file(filename):
 
 @app.route('/')
 def homepage():
+    
+    return render_template('index.html')
+
+@app.route('/leaderboard')
+def lb():
     for file in os.listdir(app.config['UPLOAD_FOLDER']):
         os.remove(os.path.join(app.config['UPLOAD_FOLDER'], file))
     
-    return render_template('index.html', data = scores, date = date_updated)
+    return render_template('leaderboard.html', data = scores, date = date_updated)
 
-@app.route('/creators_gallery')
+@app.route('/highlights')
 def creators_gallery():
     image_files = [f for f in os.listdir(IMAGE_FOLDER) if f.endswith(('.png', '.jpg', '.jpeg', '.webp', '.JPG'))]
     size_classes = ['random-size-small', 'random-size-medium', 'random-size-large']

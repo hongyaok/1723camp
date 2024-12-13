@@ -57,14 +57,25 @@
     </div>
 
     <div class="center-content">
-        <h2>方向</h2>
-        <h3>透过上帝的话，操练属灵与成长，
-            辨别对错，来做出生活中的选择</h3>
-        <h2>主题经文</h2>
-        <h3>1 所以要除去一切恶毒、一切诡诈、虚伪、嫉妒和一切毁谤的话， 2 像初生婴孩爱慕那纯净的灵奶，好叫你们靠它长大，进入救恩； 3 因为你们已经体验过主是美善的。（彼得前书 2:1-3）</h3> 
-        <h3>2 不要模仿这个世代，倒要借着心意的更新而改变过来，使你们可以察验出甚么是　神的旨意，就是察验出甚么是美好的、蒙他悦纳的和完全的事。(罗马书 12:2)</h3>
-    </div> 
-
+        <h2>Leaderboard</h2>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Team</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for team, score in data %}
+                <tr>
+                    <td>{{ team }}</td>
+                    <td>{{ score }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a>Leaderboard updated on {{ date }}</a>
+    </div>
 
 
 
