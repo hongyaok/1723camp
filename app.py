@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, send_file, redirect, url_for, jsonify, send_from_directory
 import os
 import random
-from score import scores
+from score import scores, date_updated
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'  
@@ -21,7 +21,7 @@ def homepage():
     for file in os.listdir(app.config['UPLOAD_FOLDER']):
         os.remove(os.path.join(app.config['UPLOAD_FOLDER'], file))
     
-    return render_template('index.html', data = scores)
+    return render_template('index.html', data = scores, date = date_updated)
 
 @app.route('/creators_gallery')
 def creators_gallery():
@@ -36,6 +36,10 @@ def creators_gallery():
     ]
     random.shuffle(images)
     return render_template('creators_gallery.html', images=images)
+
+@app.route('/map')
+def mapper():
+    return render_template('campsite.html')
 
 @app.route('/creatorgallery/<filename>')
 def gall_file(filename):
