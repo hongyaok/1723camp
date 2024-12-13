@@ -1,7 +1,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Agu Display', 'Long Cang', Arial, sans-serif;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -15,6 +15,7 @@ body {
     background-color: var(--topbar-color);
     color: var(--text-color);
     padding: 1rem;
+    padding-bottom: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -198,11 +199,6 @@ body {
 }
 
         
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
-}
 
 .dark-mode {
     background-color: #333;
@@ -351,11 +347,10 @@ body {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #fefefe00;
     color: black;
     margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 3rem;
     width: 80%; 
     max-width: 500px; 
     border-radius: 5px;
@@ -509,8 +504,22 @@ body {
     .styled-table th, .styled-table td {
         padding: 0.5rem; /* Reduce padding for smaller screens */
     }
+}
 
-    .center-content {
-        padding: 0.75rem; /* Reduce padding around the table */
-    }
+.download {
+    position: absolute;
+    top: 1rem; /* 16px if the root font size is 16px */
+    left: 4rem; /* Space to position it left of the close button */
+    color: white;
+    font-size: 2rem; /* Icon size, scalable across devices */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.download:hover,
+.download:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }

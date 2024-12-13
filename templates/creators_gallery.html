@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Highlights</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/my.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Long+Cang&display=swap" rel="stylesheet">
     <style>
 
         .modal {
@@ -104,6 +106,9 @@
 
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
+        <a id="downloadBtn" class="download" href="#" download>
+            &#8681;
+        </a>
         <div class="modal-content">
             <img id="modalImage" src="" alt="Expanded Image">
         </div>
@@ -140,8 +145,11 @@
         function showImageModal(imgElement) {
             const modal = document.getElementById("imageModal");
             const modalImg = document.getElementById("modalImage");
+            const downloadBtn = document.getElementById("downloadBtn");
+
             modal.style.display = "block";  
             modalImg.src = imgElement.src;  
+            downloadBtn.href = imgElement.src; // Set the download link
         }
 
         function closeModal() {
