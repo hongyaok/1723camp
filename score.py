@@ -1,10 +1,10 @@
 scores = [
-        ('Group 1', 0),
-        ('Group 2', 0),
-        ('Group 3', 0),
-        ('Group 4', 0),
-        ('Group 5', 0),
-        ('Group 6', 0),
+        ('无唯一', 20),
+        ('寻饭', 50),
+        ('Ding You Can', 50),
+        ('Wonder 4', 60),
+        ('等一下', 20),
+        ('奇meow恩典', 30),
     ]
 
-date_updated = "17/12/2024 00:00"
+date_updated = "19/12/2024 00:30"
