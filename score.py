@@ -4,7 +4,7 @@ scores = [
         ('Ding You Can', 50),
         ('Wonder 4', 60),
         ('等一下', 20),
-        ('奇meow恩典', 30),
+        ('奇meow恩典', "&#128507;"),
     ]
 
-date_updated = "19/12/2024 00:30"
+date_updated = "20/12/2024 01:45"
